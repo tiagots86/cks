@@ -1,0 +1,18 @@
+## kubelet seguro
+
+```shell
+vi /var/lib/kubelet/config.yaml
+```
+
+```yaml
+apiVersion: kubelet.config.k8s.io/v1beta1
+authentication:
+  anonymous:
+    enabled: false
+  x509:
+    clientCAFile: /etc/kubernetes/pki/ca.crt
+authorization:
+  mode: Webhook
+rotateCertificates: true
+readOnlyPort: 0
+```
