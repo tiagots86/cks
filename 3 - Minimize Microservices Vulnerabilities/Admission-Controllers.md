@@ -16,3 +16,9 @@ Para habilitar ou desabilitar no api server:
 --enable-admission-plugins=
 --disable-admission-plugin=
 ```
+
+Comnando para verificar o processo:
+
+```shell
+ps -ef | grep kube-apiserver | grep admission-plugins
+```
