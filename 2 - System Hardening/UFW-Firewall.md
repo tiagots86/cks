@@ -38,5 +38,10 @@ ufw delete deny 8080
 ufw status
 
 ufw delete status 4
+
+ufw reset
+
+ufw status numbered
+
 ```
 
