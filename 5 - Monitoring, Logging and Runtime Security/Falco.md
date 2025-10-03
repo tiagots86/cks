@@ -5,6 +5,10 @@ systemctl status falco
 
 journalctl -fu falco
 
+cat /var/run/falco.pid
+
+kill -1 $(cat /var/run/falco.pid)
+
 ```
 
 Regras são definidas em rules.yaml, contendo rules.
